@@ -1,7 +1,6 @@
-# Application
+# ArgoCD Application Tools
+In der Applikationsdefinition kann das Tool mit angegeben werden.
 
-## Aufgabe 1.1
-Minimale Konfiguration
 ```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -19,16 +18,50 @@ spec:
         targetRevision: HEAD
 ```
 
-## Aufgabe 1.2
-```
-argocd app create guestbook-2 --repo https://github.com/argoproj/argocd-example-apps.git --revision master --path guestbook --dest-server https://kubernetes.default.svc --dest-namespace app-2 --sync-option CreateNamespace=true
-
-argocd app sync guestbook-2
-
-argocd app list
-```
-
-## Aufgabe 1.3
+### Ohne Definition
 ```yaml
+---
+...
+  source:
+    
+---
+```
 
+## Helm Charts
+
+```yaml
+---
+...
+  source:
+---
+```
+
+## Kustomize
+
+```yaml
+---
+...
+  source:
+---
+```
+
+## Directory of YAML
+
+
+```yaml
+---
+...
+  source:
+    directory:
+      recurse: true
+---
+```
+## Jsonnet
+
+```yaml
+---
+...
+  source:
+    
+---
 ```

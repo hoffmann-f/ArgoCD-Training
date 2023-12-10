@@ -7,11 +7,13 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/application-specification/#a
 ## Aufgabe 1.1
 
 ### Minimale Konfiguration
-Schreibe eine minimale Konfiguration um mit ArgoCD die Testapplikation unter:
+Schreibe eine minimale Konfiguration um mit ArgoCD die Testapplikation unter
 <code>
 https://github.com/argoproj/argocd-example-apps.git
 </code>
 auszurollen.
+<br>
+Verwende dazu die Manifeste unter ``guestbook``.
 
 ArgoCD ist im Namespace `argocd` installiert
 
@@ -71,3 +73,19 @@ möglich.
   <code>argocd app create {name} --repo {repo-URL} --revision {git revision} --path {Pfad im Repo} 
 --dest-server {Cluster-URL} --dest-namespace {namespace}</code>
 </details>
+
+## Aufgabe 1.3
+
+Schreibe eine minimale Konfiguration um mit ArgoCD die Testapplikation unter
+``https://github.com/argoproj/argocd-example-apps.git``
+auszurollen.
+<br>
+Verwende dazu den Helm Chart unter ``helm-guestbook``
+
+## Aufgabe 1.4
+
+Schreibe eine minimale Konfiguration um mit ArgoCD den nginx Helm Chart von Bitnami zu installieren.
+<br>
+Das Chart Repository ist unter folgender URL zu finden:``https://charts.bitnami.com/bitnami``
+<br>
+Der Chart heißt ``bitnami/nginx``
